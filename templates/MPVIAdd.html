@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPVI Add</title>
+    <link rel="icon"type="image/x-icon" href="{{ url_for('static', filename='seder.ico') }}">
+    <link rel="stylesheet" href="addstyle.css"><link rel="stylesheet" href="{{ url_for('static', filename='addstyle.css') }}">
+</head>
+<body>
+    <form class="form-container" "{{url_for('MPVIAdd')}}" method="POST">
+    <fieldset>
+        <legend>Status</legend>
+        <label>
+            <input type="radio" name="status" value="Repaired" required> Repaired
+        </label>
+        <label>
+            <input type="radio" name="status" value="Under repair"> Under repair
+        </label>
+        <label>
+            <input type="radio" name="status" value="Under review"> Under review
+        </label>
+    </fieldset>
+    
+        <label for="expiration-date">Expiration<span>*</span></label>
+        <input type="date" id="expiration-date" required>
+
+        <label for="attachment">Attachment <span>*</span></label>
+        <input type="file" id="attachment" required>
+
+        <div class="button-group">
+            <a href="{{ url_for('MPVI') }}">
+                <button type="button" class="cancel-button">Cancel</button>
+            </a>
+            <a href="{{ url_for('MPVI') }}">
+                <button type="submit" class="add-button">Add</button>
+            </a>
+        </div>
+    </form>
+</body>
+</html>

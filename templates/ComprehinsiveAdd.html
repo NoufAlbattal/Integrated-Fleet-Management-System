@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accident Form</title>
+    <link rel="icon"type="image/x-icon" href="{{ url_for('static', filename='seder.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ComprehinsiveAdd.css') }}">
+</head>
+<body>
+    <form class="form-container" "{{url_for('ComprehinsiveAdd')}}" method="POST">
+        <label for="chassis-number">Chassis Number <span>*</span></label>
+        <input type="text" id="chassis-number" required>
+
+        <label for="location">Location <span>*</span></label>
+        <input type="text" id="location" required>
+
+        <label for="accident-number">Accident Number <span>*</span></label>
+        <input type="text" id="accident-number" required>
+
+        <label for="mistake-percent">Mistake Percent <span>*</span></label>
+        <select id="mistake-percent" required>
+            <option value="" disabled selected>Select</option>
+            <option value="0%">0%</option>
+            <option value="25%">25%</option>
+            <option value="50%">50%</option>
+            <option value="75%">75%</option>
+            <option value="100%">100%</option>
+        </select>
+
+        <label for="accident-date">Accident Date <span>*</span></label>
+        <input type="date" id="accident-date" required>
+
+        <label for="description">Description <span>*</span></label>
+        <textarea id="description" rows="4" required></textarea>
+
+        <fieldset>
+            <legend>Status</legend>
+            <label>
+                <input type="radio" name="status" value="Repaired" required> Repaired
+            </label>
+            <label>
+                <input type="radio" name="status" value="Under repair"> Under repair
+            </label>
+            <label>
+                <input type="radio" name="status" value="Under review"> Under review
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Responding Authority</legend>
+            <label>
+                <input type="radio" name="authority" value="Najm" required> Najm
+            </label>
+            <label>
+                <input type="radio" name="authority" value="MOI"> MOI
+            </label>
+        </fieldset>
+
+        <label for="attachment">Attachment <span>*</span></label>
+        <input type="file" id="attachment" required>
+
+        <div class="button-group">
+            <a href="{{ url_for('Comprehensive') }}">
+                <button type="button" class="cancel-button">Cancel</button>
+            </a>
+            <a href="{{ url_for('Comprehensive') }}">
+                <button type="submit" class="add-button">Add</button>
+            </a>
+        </div>
+    </form>
+</body>
+</html>
+

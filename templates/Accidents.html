@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accidents</title>
+  <link rel="icon"type="image/x-icon" href="{{ url_for('static', filename='seder.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='Accidents.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='mainstyle.css') }}">
+</head>
+<body>
+  <!-- Sidebar Section -->
+  <div class="sidebar">
+    <button class="icon">
+      <a href="{{ url_for('user') }}">
+        <img src="{{ url_for('static', filename='user.png') }}" alt="User Icon">
+      </a>
+    </button>
+
+    <button class="icon">
+      <a href="https://sedergroupsa-my.sharepoint.com/:u:/g/personal/rimisa_seder_sa/EQCHF21UnmVFvevRPV1EDQcB5wiRS5CGoykEWJlTtwc3gQ?e=nCdXNN" target="_blank">
+      <img src="{{ url_for('static', filename='dashboard.png') }}">
+    </a>
+    </button>
+
+    <button class="icon">
+      <label for="upload-file"> 
+    <img src="{{ url_for('static', filename='upload.png') }}">
+      </label>
+      <input type="file" id="upload-file" style="display: none;">
+  </button>
+
+    <button class="icon">
+        <img src="{{ url_for('static', filename='plus.png') }}"></a>
+    </a>
+    </button>
+
+    <button class="icon">
+      <a href="{{ url_for('logout') }}">
+        <img src="{{ url_for('static', filename='logout.png') }}" alt="Logout Icon">
+      </a>
+    </button>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <h2>Accidents</h2>
+    <div class="services">
+      <form action="{{ url_for('Thirdparty')}}" method="GET">
+        <button class="service-btn">
+            <h1>Thirdparty</h1>
+        </button>
+    </form>
+
+    <form action="{{ url_for('Comprehensive')}}" method="GET">
+        <button class="service-btn">
+            <h1>Comprehensive</h1>
+        </button>
+    </form>
+    
+    </div>
+  </div>
+</body>
+</html>

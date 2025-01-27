@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violations</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='seder.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mainstyle.css') }}">
+</head>
+<body>
+
+  <!-- Sidebar Section -->
+  <div class="sidebar">
+    <button class="icon"><a href="{{ url_for('user') }}"><img src="{{ url_for('static', filename='user.png') }}"></a></button>
+    <button class="icon"><a href="https://sedergroupsa-my.sharepoint.com/:u:/g/personal/rimisa_seder_sa/EQCHF21UnmVFvevRPV1EDQcB5wiRS5CGoykEWJlTtwc3gQ?e=nCdXNN" target="_blank"><img src="{{ url_for('static', filename='dashboard.png') }}"></a></button>
+    <button class="icon"><label for="upload-file"><img src="{{ url_for('static', filename='upload.png') }}"></label><input type="file" id="upload-file" style="display: none;"></button>
+    <button class="icon"><img src="{{ url_for('static', filename='plus.png') }}"></button>
+    <button class="icon"><a href="{{ url_for('logout') }}"><img src="{{ url_for('static', filename='logout.png') }}"></a></button>
+  </div>
+
+  <div class="main-content">
+    <header><h1>Violations</h1></header>
+
+    <!-- Form Section -->
+    <form method="POST" action="{{ url_for('Violations') }}">
+        <table>
+            <thead>
+                <tr>
+                    <th class="blue">Violations number</th>
+                    <th>Driver id number</th>
+                    <th>Chassis Number</th>
+                    <th>Violations Date</th>
+                    <th>Sector</th>
+                    <th>Project</th>
+                    <th>PlateNo</th>
+                    <th>Violations type</th>
+                    <th>Violations time</th>
+                    <th>Violation value</th>
+                    <th>Location</th>
+                    <th>Submit</th>
+                    <th>Export</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="violations_number" placeholder="Enter Violations number" required></td>
+                    <td><input type="text" name="driver_id" placeholder="Enter Driver id number" required></td>
+                    <td><input type="text" name="chassis_number" placeholder="Enter Chassis Number" required></td>
+                    <td><input type="text" name="violations_date" placeholder="Enter Violations Date" required></td>
+                    <td><input type="text" name="sector" placeholder="Enter Sector" required></td>
+                    <td><input type="text" name="project" placeholder="Enter Project" required></td>
+                    <td><input type="text" name="plate_no" placeholder="Enter PlateNo" required></td>
+                    <td><input type="text" name="violations_type" placeholder="Enter Violations type" required></td>
+                    <td><input type="text" name="violations_time" placeholder="Enter Violations time" required></td>
+                    <td><input type="text" name="violation_value" placeholder="Enter Violation value" required></td>
+                    <td><input type="text" name="location" placeholder="Enter Location" required></td>
+                    <td><button type="submit" name="submit">Submit</button></td>
+                    <td><button type="submit" name="export">Export</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    {% if message %}
+        <p><strong>Message:</strong> {{ message }}</p>
+    {% endif %}
+  </div>
+
+</body>
+</html>

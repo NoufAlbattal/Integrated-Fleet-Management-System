@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>workshop</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='seder.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mainstyle.css') }}">
+</head>
+
+<body>
+
+    <!-- Sidebar Section -->
+    <div class="sidebar">
+        <button class="icon">
+            <a href="{{ url_for('user') }}">
+                <img src="{{ url_for('static', filename='user.png') }}">
+            </a>
+        </button>
+
+        <button class="icon">
+            <a href="https://sedergroupsa-my.sharepoint.com/:u:/g/personal/rimisa_seder_sa/EQCHF21UnmVFvevRPV1EDQcB5wiRS5CGoykEWJlTtwc3gQ?e=nCdXNN" target="_blank">
+                <img src="{{ url_for('static', filename='dashboard.png') }}">
+            </a>
+        </button>
+
+        <button class="icon">
+            <label for="upload-file">
+                <img src="{{ url_for('static', filename='upload.png') }}">
+            </label>
+            <input type="file" id="upload-file" style="display: none;">
+        </button>
+
+        <button class="icon">
+            <a href="{{ url_for('woadd')}}">
+            <img src="{{ url_for('static', filename='plus.png') }}"  alt="اضافه" >
+            </a>
+        </button>
+
+        <button class="icon">
+            <a href="{{ url_for('logout') }}">
+                <img src="{{ url_for('static', filename='logout.png') }}">
+            </a>
+        </button>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <header>
+            <h1>WorkShop</h1>
+        </header>
+
+        <!-- الجدول الأول -->
+        <form method="POST" action="{{ url_for('WorkShop') }}">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="blue">Plate</th>
+                        <th>Sector</th>
+                        <th>InvoicesNo</th>
+                        <th>Total Amount</th>
+                        <th>Date</th>
+                        <th>Supplier</th>
+                        <th>Submit</th>
+                        <th>Export</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" placeholder="Enter Plate"></td>
+                        <td><input type="text" placeholder="Enter Sector"></td>
+                        <td><input type="text" placeholder="Enter Invoice No"></td>
+                        <td><input type="text" placeholder="Enter Total Amount"></td>
+                        <td><input type="text" placeholder="Enter Date"></td>
+                        <td><input type="text" placeholder="Enter Supplier"></td>
+                        <td><button type="submit" name="submit">Submit</button></td>
+                        <td><button type="submit" name="export">Export</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+        <!-- عرض الرسالة -->
+        {% if message %}
+        <p><strong>Message:</strong> {{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

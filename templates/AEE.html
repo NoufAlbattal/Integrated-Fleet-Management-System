@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assest</title>
+    <link rel="icon"type="image/x-icon" href="{{ url_for('static', filename='seder.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mainstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='upload_one_click.html') }}">
+  
+</head>
+<body>
+   <!-- Sidebar Section -->
+   <div class="sidebar">
+    <button class="icon">
+        <a href="{{ url_for('user') }}">
+            <img src="{{ url_for('static', filename='user.png') }}">
+        </a>
+    </button>
+
+    <button class="icon">
+        <a href="https://sedergroupsa-my.sharepoint.com/:u:/g/personal/rimisa_seder_sa/EQCHF21UnmVFvevRPV1EDQcB5wiRS5CGoykEWJlTtwc3gQ?e=nCdXNN" target="_blank">
+            <img src="{{ url_for('static', filename='dashboard.png') }}">
+        </a>
+    </button>
+
+    <button class="icon">
+        <label for="upload-file">
+            <img src="{{ url_for('static', filename='upload.png') }}">
+        </label>
+        <input type="file" id="upload-file" style="display: none;">
+    </button>
+
+    <button class="icon">
+        <img src="{{ url_for('static', filename='plus.png') }}">
+    </button>
+
+    <button class="icon">
+        <a href="{{ url_for('logout') }}">
+            <img src="{{ url_for('static', filename='logout.png') }}">
+        </a>
+    </button>
+</div>
+
+  <!-- المحتوى الرئيسي -->
+  <div class="main-content">
+    <header>
+        <h1>Assest</h1>
+    </header>
+
+    <!-- الجدول الأول -->
+    <table>
+        <thead>
+            <tr>
+                <th class="blue">Department</th>
+                <th>Project Name</th>
+                <th>Plate</th>
+                <th>Chassis Number</th>
+                <th>Sequence Number</th>
+                <th>Vehicle Type</th>
+                <th>EQ.Make</th>
+                <th>EQ.Model</th>
+                <th>Model Year</th>
+                <th>Color</th>
+                <th>Status</th>
+                <th>Asset Owner</th>
+                <th>License Expiry Date</th>
+                <th>MPVI Expiry Date</th>
+                <th>Seats</th>
+                <th>EQ.Location</th>
+                <th>OP.Card Expiry Date</th>
+                <th>Insurance Expiry Date</th>
+                <th>GPS</th>
+                <th>Fuel Type</th>
+                <th>Fuel Chips</th>
+                <th>Chips Provider</th>
+                <th>Transport Type</th>
+                <th>Username</th>
+                <th>User ID</th>
+                <th>Asset Value</th>
+                <th>Substructures Value</th>
+               
+                
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <tr>
+    </tr>
+  </div>
+  <div>
+    <div class="search-form">
+    <form method="POST" action="/search">
+        <input type="text" name="query" placeholder="Search..." value="{{ query }}">
+        <button type="submit">Search</button>
+        <td><button type="submit" name="export">Export</button></td>
+    </form>
+    <ul>
+        {% for item in data %}
+            <li>{{ item.name }} ({{ item.category }})</li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
+

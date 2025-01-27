@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accident Form</title>
+    <link rel="icon"type="image/x-icon" href="{{ url_for('static', filename='seder.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='asses.css') }}">
+
+</head>
+<body>
+
+        <label for="Department">Department<span>*</span></label>
+        <input type="text" id="Department" required>
+
+        <label for="project name">project name<span>*</span></label>
+        <input type="text" id="Department" required>
+
+        <label for="Plate">Plate <span>*</span></label>
+        <input type="text" id="Plate" required>
+
+        <label for="Chassis Number">Chassis Number <span>*</span></label>
+        <input type="text" id="Chassis Number" required>
+       
+        <label for="Sequence Number ">Sequence Number <span>*</span></label> 
+        <input type="text" id="Sequence Number " required>
+
+        <label for="Vehicles Type">Vehicles Type <span>*</span></label>
+        <input type="text" id="Vehicles Type" required>
+
+        <label for="EQ.make">EQ.make <span>*</span></label>
+        <input type="text" id="EQ.make" required>
+
+        <label for="EQ.Model">EQ.Model <span>*</span></label>
+        <input type="text" id="EQ.Model" required>
+
+        <label for="Model Year">Model Year <span>*</span></label>
+        <input type="text" id="Model Year" required>
+
+        <label for="Color">Color <span>*</span></label>
+        <input type="text" id="Color" required>
+
+        <label for="Assest Owner">Assest Owner <span>*</span></label>
+        <input type="text" id="Assest Owner" required>
+
+        <label for="License Expiry Date">License Expiry Date <span>*</span></label>
+        <input type="date" id="License Expiry Date" required>
+
+        <label for="MPVI Expiry Date">MPVI Expiry Date <span>*</span></label>
+        <input type="date" id="MPVI Expiry Date" required>
+
+        <label for="Seats">Seats <span>*</span></label>
+        <input type="text" id="Seats" required>
+
+        <label for="EQ.Location">EQ.Location<span>*</span></label>
+        <input type="text" id="EQ.Location" required>
+
+        <label for="OP.Card EXP Date">OP.Card EXP Date <span>*</span></label>
+        <input type="date" id="OP.Card EXP-Date" required>
+
+        <label for="Insurance EXP.Date">Insurance EXP.Date <span>*</span></label>
+        <input type="date" id="Insurance EXP.Date" required>
+
+        <label for="Insurance EXP.Date">Insurance EXP.Date <span>*</span></label>
+        <input type="date" id="Insurance EXP.Date" required>
+
+
+        <label for="Chips Provider">Chips Provider <span>*</span></label>
+        <input type="text" id="Chips Provider" required>
+
+
+        <label for="User name">User name <span>*</span></label>
+        <input type="text" id="User name" required>
+
+        <label for="User ID">User ID <span>*</span></label>
+        <input type="text" id="User ID" required>
+
+        <label for="Assest Value ">Assest Value  <span>*</span></label>
+        <input type="text" id="Assest Value" required>
+
+        <label for="Substructures Value">Substructures Value<span>*</span></label>
+        <input type="text" id="Substructures Value" required>
+
+        <fieldset>
+            <legend>Transport Type</legend>
+            <label>
+                <input type="radio" name="Transport Type" value="نقل عام" required> نقل عام
+            </label>
+            
+            <label>
+                <input type="radio" name="Transport Type" value="نقل خاص"> نقل خاص
+            </label>
+
+            <label>
+                <input type="radio" name="Transport Type" value="خصوصي"> خصوصي
+            </label>
+        </fieldset>
+    
+
+        <fieldset>
+            <legend>Status</legend>
+            <label>
+                <input type="radio" name="status" value="ACTIVE" required> ACTIVE
+            </label>
+            
+            <label>
+                <input type="radio" name="status" value="UNACTIVE"> UNACTIVE
+            </label>
+            <label>
+        </fieldset>
+
+        <fieldset>
+            <legend>GPS</legend>
+            <label>
+                <input type="radio" name="GPS" value="Yes" required>Yes
+            </label>
+            <label>
+                <input type="radio" name="GPS" value="NO" required>No
+            </label>
+        </fieldset>
+
+            <fieldset>
+            <legend>Fuel Type</legend>
+            <label>
+                <input type="radio" name="authority" value="GAS 91" required>GAS 91
+                <input type="radio" name="authority" value="GAS 95" required>GAS 95
+                <input type="radio" name="authority" value="Diesal" required>Diesel
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Fuel Chips</legend>
+            <label>
+                <input type="radio" name="Fuel Chips" value="Yes" required>Yes
+            </label>
+            <label>
+                <input type="radio" name="Fuel Chips" value="NO" required>No
+            </label>
+        </fieldset> 
+
+    
+
+        
+        <div class="button-group">
+            <a href="{{ url_for('AEE') }}">
+                <button type="button" class="cancel-button">Cancel</button>
+            </a>
+            <a href="{{ url_for('AEE') }}">
+                <button type="submit" class="add-button">Add</button>
+            </a>
+        </div>
+
+</body>
+</html>
+

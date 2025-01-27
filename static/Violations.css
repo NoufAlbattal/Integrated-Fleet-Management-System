@@ -1,0 +1,243 @@
+/* التصميم العام */
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f5f5;
+
+}
+
+ 
+
+.container {
+
+    display: flex;
+
+}
+
+ 
+
+/* الشريط الجانبي */
+
+.sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: #171C5E;
+
+    height: 100vh;
+
+    width: 60px;
+
+    padding: 10px 0;
+
+}
+
+ 
+
+.profile-icon i {
+
+    font-size: 30px;
+
+    color: #fff;
+
+    margin-bottom: 20px;
+
+}
+
+ 
+
+.menu-icons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+ 
+
+.menu-icons i {
+
+    color: #fff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+ 
+
+.bottom-icon {
+
+    margin-top: auto;
+
+}
+
+ 
+
+.bottom-icon i {
+
+    color: #fff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+ 
+
+/* المحتوى الرئيسي */
+
+.main-content {
+
+    flex: 1;
+
+    padding: 20px;
+
+}
+
+ 
+
+header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+ 
+
+header h1 {
+
+    color: #171C5E;
+
+    font-size: 24px;
+
+}
+
+ 
+
+/* شريط البحث */
+
+.search-bar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+ 
+
+.search-bar input {
+
+    padding: 5px 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    width: 200px;
+
+}
+
+ 
+
+.search-bar button {
+
+    background-color: #ddd;
+
+    border: none;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+ 
+
+.search-bar i {
+
+    color: #171C5E;
+
+}
+
+ 
+
+/* الجداول */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-bottom: 20px;
+
+    background-color: #fff;
+
+    border: 1px solid #ccc;
+
+}
+
+ 
+
+table th {
+
+    background-color: #d9e1f2;
+
+    color: #171C5E;
+
+    text-align: left;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+}
+
+ 
+
+table td {
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    text-align: left;
+
+}
+
+ 
+
+table tbody tr:nth-child(even) {
+
+    background-color: #f9f9f9;
+
+}
+
+ 

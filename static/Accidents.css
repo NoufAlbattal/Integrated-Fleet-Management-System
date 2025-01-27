@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        background-color: #0d1b47;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+/* Sidebar Styles */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171C5E;
+    height: 100vh;
+    width: 60px;
+    padding: 10px 0;
+}
+
+.sidebar .icon {
+    margin: 10px 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.sidebar .icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.main-content {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    
+}
+.main-content h2 {
+    margin: 0; /* Removes any default margins */
+    position: absolute; /* Positions h1 inside the container */
+    top: 20px; /* Adjusts distance from the top */
+    left: 200px; /* Adjusts distance from the left */
+    font-size: 2rem; /* Adjust font size as needed */
+    color: #171C5E; /* Matches text color */
+    color: #171C5E;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.services {
+    display: flex; /* Ensures buttons are side by side */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    gap: 70px; /* Space between buttons */
+    padding: 50px;
+    border-radius: 20px;
+    width: 100%; /* Ensure buttons stay centered */
+    max-width: 1200px;
+}
+
+.service-btn {
+    background-color: #002a70;
+    color: #ffffff;
+    padding: 150px 70px; /* Uniform padding for consistent button size */
+    border: none;
+    border-radius: 15px;
+    font-size: 2.5rem; /* Larger text */
+    display: flex; /* Flex for proper alignment */
+    align-items: center; /* Center content within the button */
+    justify-content: center; /* Center content within the button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+    text-align: center;
+    width: 500px; /* Explicit width to make buttons equal */
+    height: 400px; /* Explicit height for uniform size */
+}
+
+.service-btn h1 {
+    font-size: 2.5rem; /* Larger heading size */
+    color: #ffffff;
+    margin: 0; /* Removed margin to avoid extra spacing */
+}
+
+
+
+
+
+.service-btn:hover {
+    background-color: #33528c; /* Slightly lighter shade */
+}

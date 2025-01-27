@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Icon</title>
+    </style>
+</head>
+<body>
+    <h1>Upload a File</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label class="upload-icon">
+          <a href="{{ url_for('upload_one_click') }}">
+            <img src="{{ url_for('static', filename='upload.png') }}">
+                </a>
+            <input type="file" name="file">
+        </label>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

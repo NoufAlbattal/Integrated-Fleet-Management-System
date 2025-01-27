@@ -1,0 +1,35 @@
+/* mainstyle.css */
+
+/* General reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  .user-info {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-info h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #444;
+  }
+  
+  .user-info p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .user-info strong {
+    color: #000;
+  }
+  

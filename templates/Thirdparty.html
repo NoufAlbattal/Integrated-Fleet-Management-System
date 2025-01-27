@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accidents ThirdParty </title>
+  <link rel="icon"type="image/x-icon" href="{{ url_for('static', filename='seder.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='Thirdparty.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='mainstyle.css') }}">
+</head>
+<body>
+
+  <!-- Sidebar Section -->
+  <div class="sidebar">
+    <button class="icon">
+      <a href="{{ url_for('user') }}">
+        <img src="{{ url_for('static', filename='user.png') }}" alt="User Icon">
+      </a>
+    </button>
+
+    <button class="icon">
+      <a href="https://sedergroupsa-my.sharepoint.com/:u:/g/personal/rimisa_seder_sa/EQCHF21UnmVFvevRPV1EDQcB5wiRS5CGoykEWJlTtwc3gQ?e=nCdXNN" target="_blank">
+      <img src="{{ url_for('static', filename='dashboard.png') }}">
+    </a>
+    </button>
+
+    <button class="icon">
+      <img src="{{ url_for('static', filename='upload.png') }}" alt="Upload Icon">
+    </button>
+
+    <button class="icon">
+      <a href="{{ url_for('ThirdpartyAdd')}}">
+        <img src="{{ url_for('static', filename='plus.png') }}" alt="Add Icon">
+      </a>
+    </button>
+
+    <button class="icon">
+      <a href="{{ url_for('logout') }}">
+        <img src="{{ url_for('static', filename='logout.png') }}" alt="Logout Icon">
+      </a>
+    </button>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <h1 class="title">Third Party</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Chassis Number</th>
+          <th>Location</th>
+          <th>Accident Number</th>
+          <th>Mistake Percent</th>
+          <th>Accident Date</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Responding Authority</th>
+          <th>Attachment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Add table rows here -->
+      </tbody>
+    </table>
+  </div>
+
+   
+  <div>
+    <div class="search-form">
+    <form method="POST" action="/search">
+        <input type="text" name="query" placeholder="Search..." value="{{ query }}">
+        <button type="submit">Search</button>
+        <td><button type="submit" name="export">Export</button></td>
+    </form>
+    <ul>
+        {% for item in data %}
+            <li>{{ item.name }} ({{ item.category }})</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+</body>
+</html>

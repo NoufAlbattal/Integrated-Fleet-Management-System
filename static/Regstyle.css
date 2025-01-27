@@ -1,0 +1,110 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex; /* Use flexbox to create a row layout */
+    height: 100vh; /* Ensures full height for the page */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171C5E;
+    height: 100vh;
+    width: 150px; /* Standardized width for the sidebar */
+    padding: 20px 0;
+    position: fixed; /* Sidebar stays in place while scrolling */
+}
+
+.sidebar .icon {
+    margin: 20px 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.sidebar .icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 150px; /* Ensures that content doesn't overlap with the sidebar */
+    padding: 20px;
+    flex: 1;
+}
+
+.main-content h1 {
+    color: #171C5E;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 130%;
+    margin-bottom: 20px;
+    background-color:#0e1572;
+    margin-left: -20px; 
+
+}
+
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px 3px;
+}
+
+table th {
+    width: 0%;
+    background-color:#0e1572;
+    color: #fefeff;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+
+
+/* Form Styles */
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 200px; /* Increased bottom margin */
+    margin-top: 25px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 8px 15px;
+    background-color: #171C5E;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #0e1572;
+}

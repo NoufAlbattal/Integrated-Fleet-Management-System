@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    background-color: #0d1b47;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #0d1b47;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.main-content h2 {
+    font-size: 6rem;
+    color: #ffffff;
+    margin-top: 10%;
+    font-weight:bold;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    width: 85%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-btn {
+    background-color: #ffffff;
+    color: #445bba;
+    padding: 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-btn i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #445bba;
+}
+
+.service-btn h1 {
+    font-size: 2rem;
+    color:#111570;
+    margin-bottom: 10px;
+}
+
+.service-btn p {
+    color: #111570;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.service-btn:hover {
+    background-color: #bbd7fb;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.fuel-icon {
+    width: 90px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px; /* Space between the icon and the text */
+}
+.assest-icon {
+    width: 90px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px; /* Space between the icon and the text */
+}
+
+.violations-icon {
+    width: 90px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px; /* Space between the icon and the text */
+}
+
+.accidents-icon {
+    width: 90px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px; /* Space between the icon and the text */
+}
+
+
+.reg-icon {
+    width: 90px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px; /* Space between the icon and the text */
+}
+.workshop-icon{
+    width: 90px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px; /* Space between the icon and the text */
+}

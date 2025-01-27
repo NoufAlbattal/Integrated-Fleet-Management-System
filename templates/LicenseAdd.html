@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Add</title>
+    <link rel="icon"type="image/x-icon" href="{{ url_for('static', filename='seder.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='addstyle.css') }}"></head>
+<body>
+    <form class="form-container" "{{url_for('LicenseAdd')}}" method="POST">
+        <label for="license type">License Type <span>*</span></label>
+        <input type="text" id="chassis-number" required>
+
+        <label for="issue-date">Issue Date <span>*</span></label>
+        <input type="date" id="issue-date" required>
+
+<fieldset>
+            <legend>Status</legend>
+            <label>
+                <input type="radio" name="status" value="Repaired" required> Repaired
+            </label>
+            <label>
+                <input type="radio" name="status" value="Under repair"> Under repair
+            </label>
+            <label>
+                <input type="radio" name="status" value="Under review"> Under review
+            </label>
+        </fieldset>
+
+        <label for="attachment">Attachment <span>*</span></label>
+        <input type="file" id="attachment" required>
+
+        <div class="button-group">
+            <a href="{{ url_for('License') }}">
+                <button type="button" class="cancel-button">Cancel</button>
+            </a>
+            <a href="{{ url_for('License') }}">
+                <button type="submit" class="add-button">Add</button>
+            </a>
+        </div>
+
+    </form>
+</body>
+</html>

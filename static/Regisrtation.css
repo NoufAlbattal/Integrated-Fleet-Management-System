@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171C5E;
+    height: 100vh;
+    width: 60px;
+    padding: 10px 0;
+}
+
+.sidebar .icon {
+    margin: 10px 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.sidebar .icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-content h1 {
+    color: #171C5E;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 104%;
+    margin-bottom: 20px;
+    background-color:#0e1572;
+    margin-left: -20px; 
+
+}
+
+/* Ensure all <th> elements have equal width */
+table th {
+    width: 50%;
+ 
+}
+
+/* Alternatively, set equal widths for the links directly */
+table th a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+table a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color:#0e1572;
+    color: #ffffff;
+    border-collapse: collapse; /* Remove spacing between cells */
+    border-spacing: 0; 
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 20px 0; /* Increase vertical padding for taller boxes */
+    font-size: 18px; /* Make the text larger */
+    font-weight: bold;
+    min-width: 150px; /* Set a minimum width to ensure larger boxes */
+    box-sizing: border-box;
+}
+
+table a:hover {
+    background-color:#2932b3;
+    cursor: pointer;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
